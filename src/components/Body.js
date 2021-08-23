@@ -2,7 +2,7 @@ import Header from './Header'
 
 const Body = () => {
     return ( 
-        <div className="w-7/8">
+        <div className="w-full">
             <Header />
         </div>
      );

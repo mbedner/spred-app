@@ -6,11 +6,16 @@ module.exports = {
       width: {
         '1/8': '12.5%',
         '7/8': '87.5%',
-      }
+      },
+      fontSize: {
+        '2xs': '9px',
+      },
     },
   },
   variants: {
-    extend: {},
+    display: ["group-hover"],
+    extend: { 
+    },
   },
   plugins: [],
 }
