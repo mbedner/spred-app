@@ -1,20 +1,11 @@
 import MainNav from "./sidebar/MainNav";
+import MenuItems from "./sidebar/MenuItems";
 
 const Sidebar = () => {
     return ( 
         <section id="sidebar" className="border-r h-full bg-white flex flex-row w-72">
             <MainNav />
-            <div className="p-4 flex flex-col justify-between h-full w-full">
-                <ul>
-                    <li className="py-2 px-4 rounded mb-2 hover:bg-gray-100 flex items-center uppercase font-semibold text-sm tracking-wider"> <span>Home</span></li>
-                    <li className="py-2 px-4 rounded my-2 hover:bg-gray-100 flex items-center uppercase font-semibold text-sm tracking-wider"> <span>Tasks</span></li>
-                    <li className="py-2 px-4 rounded my-2 hover:bg-gray-100 flex items-center uppercase font-semibold text-sm tracking-wider"> <span>Calendar</span></li>
-                    <li className="py-2 px-4 rounded my-2 hover:bg-gray-100 flex items-center uppercase font-semibold text-sm tracking-wider"> <span>Team</span></li>
-                </ul>
-                <ul>
-                    <li className="py-2 px-4 rounded mb-2 hover:bg-gray-100 flex items-center uppercase font-semibold text-sm tracking-wider"> <span className="ml-3">Home</span></li>
-                </ul>
-            </div>
+            <MenuItems />
         </section>
      );
 }
