@@ -2,7 +2,7 @@ import Header from './Header'
 
 const Body = () => {
     return ( 
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
             <Header />
         </div>
      );

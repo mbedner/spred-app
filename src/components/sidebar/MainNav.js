@@ -10,18 +10,18 @@ import Modal from "../Modal";
 
 const MainNav = () => {
 
-    const [ isOpen, setIsOpen ] = useState(false)
+    const [ showModal, setShowModal ] = useState(false)
 
-    const handleOpen = () => {
-        setIsOpen(true)
+    const openModal = () => {
+        setShowModal(prev => !prev)
     }
 
 
     return ( 
         <>
-        <div className="flex justify-between flex-col py-5 px-2 bg-gradient-to-b from-blue-500 to-indigo-500">
+        <div className="flex justify-between flex-col p-2 bg-gradient-to-b from-blue-500 to-indigo-500">
             <ul>
-                <li className="text-white text-2xl text-center mb-3 flex flex-col items-center rounded p-1 cursor-pointer hover:bg-blue-700" onClick={ handleOpen }><HiOutlinePlusCircle/><span className="leading-tight text-2xs opacity-80">Add</span></li>
+                <li className="text-white text-2xl text-center mb-3 flex flex-col items-center rounded p-1 cursor-pointer hover:bg-blue-700" onClick={ openModal }><HiOutlinePlusCircle/><span className="leading-tight text-2xs opacity-80">Add</span></li>
                 <li className="text-white text-2xl text-center mb-3 flex flex-col items-center rounded p-1 cursor-pointer hover:bg-blue-700"><HiOutlineCalendar/><span className="leading-tight text-2xs opacity-80">Calendar</span></li>
                 <li className="text-white text-2xl text-center mb-3 flex flex-col items-center rounded p-1 cursor-pointer hover:bg-blue-700"><HiOutlineClipboardList/><span className="leading-tight text-2xs opacity-80">Tasks</span></li>
                 <li className="text-white text-2xl text-center mb-3 flex flex-col items-center rounded p-1 cursor-pointer hover:bg-blue-700"><HiOutlineChartBar/><span className="leading-tight text-2xs opacity-80">Reports</span></li>
@@ -38,9 +38,7 @@ const MainNav = () => {
                 <li className="text-white text-2xl text-center cursor-pointer flex flex-col items-center justify-center rounded p-1 hover:bg-indigo-700"><HiOutlineQuestionMarkCircle/></li>
             </ul>
         </div>
-        <Modal open={isOpen} />
-
-        {/* {console.log(isOpen)} */}
+        <Modal showModal={showModal} setShowModal={setShowModal}/>
         </>
      );
 }

@@ -11,7 +11,6 @@ function App() {
     <div className="App h-full flex">
       <Sidebar />
       <Body />
-      {/* <Modal/> */}
     </div>
   );
 }

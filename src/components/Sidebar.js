@@ -3,7 +3,7 @@ import MenuItems from "./sidebar/MenuItems";
 
 const Sidebar = () => {
     return ( 
-        <section id="sidebar" className="border-r h-full bg-white flex flex-row w-72">
+        <section id="sidebar" className="border-r h-full bg-white flex flex-row w-96">
             <MainNav />
             <MenuItems />
         </section>
